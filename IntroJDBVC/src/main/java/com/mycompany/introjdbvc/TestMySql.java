@@ -18,6 +18,9 @@ public class TestMySql {
     
     public static void main(String[]args){
         PersonaDao personaDao = new PersonaDao();
+        Persona p2 = new Persona(1, "Jonathan", "Toala", "tjon@gmail.com", "666666666");
+        
+        personaDao.actualizar(p2);
     
         try {
             List<Persona> personas = personaDao.selecionar();
@@ -27,6 +30,11 @@ public class TestMySql {
         } catch(SQLException ex){
             ex.printStackTrace(System.out);
         }
+        
+        Persona p = new Persona("Jonathan", "Aguilar", "jAgu@gmail.com", "642964234");
+        //personaDao.insertar(p);
+        
+        
     }
     
     

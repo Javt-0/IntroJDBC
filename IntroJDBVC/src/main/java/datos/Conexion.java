@@ -13,7 +13,7 @@ import java.sql.*;
  * @author jonat
  */
 public class Conexion {
-    private static final String JDBC_URL = "jbc:msql://localhost:3306/test?useSSL=false"+
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/test?useSSL=false"+
                     "&useTimezone=true&serverTimezone=UTC"+
                     "&allowPublickeyRetrival=true";
     private static final String JDBC_USER = "root";
@@ -28,9 +28,9 @@ public class Conexion {
         rs.close();
     }
     
-    public static void close(Statement stm) throws SQLException{
+    /*public static void close(Statement stm) throws SQLException{
         stm.close();
-    }
+    }*/
     
     public static void close(PreparedStatement stm) throws SQLException{
         stm.close();
